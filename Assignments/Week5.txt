@@ -1,0 +1,51 @@
+OO assignments
+
+Q1
+Design an student object based on the following properties and behaviour
+-has a first name
+-has a last name
+-has an age
+-has a class
+-has a tutor
+
+When a student is created the first and last name + class should be mandetory.
+Implement the functionality that will enforce this.
+
+Show that your code is working by instantiating 5 different student objects
+and asking the first and last name + class of each student
+
+
+Q2
+Students should also be able to say their complete name.
+Add a method say_name that will print the first and last name (use str.format())
+
+
+Q3
+add a method that will allow you to print a student object.
+Whenever a student is printed te output should look like this (use str.format())
+
+first name: students firstname
+lastname: students lastname
+class: students class
+
+Tip, \n will print a newline
+
+
+Q4
+Add a method that will set the age of the student. The age should be checked, only add the age if it is above 16, print an message if it is not.
+create two new students, one that is 18 and one that is 12. The age should not be given when creating the object, you have to call this method explicitly.
+
+
+Q5
+Add a class variable that will hold the name of every created student
+Add a class variable that can be used to keep track of how many students are created
+When creating a student his/her first name should be added to this class variable and the count variable should grow by 1
+Create 5 students and show after the last student has been created the content of this class variable and the count variable.
+
+
+Q6
+Now design a Master student, that will inherent from the student class.
+Every master student should have a previous eduction variable that needs to be provided during creation of the object
+
+Remember to also fullfill the requirements of the base (Student) class 
+
