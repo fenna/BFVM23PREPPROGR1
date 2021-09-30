@@ -14193,6 +14193,82 @@ Lets take a look at one of the modules from this standard library.  To use a mod
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>NumPy</strong> is the fundamental package for scientific computing in Python
+<a href="https://numpy.org/doc/stable/user/absolute_beginners.html">https://numpy.org/doc/stable/user/absolute_beginners.html</a></p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python naive
+<code>c = []
+for i in range(len(a)):
+    c.append(a[i]*b[i])</code></p>
+<p>Numpy implementation
+<code>c = a * b</code></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># 1D array</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1D array: &#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+
+<span class="c1">#multi dimensional array</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2D array: &#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2D array: &#39;</span><span class="p">,</span> <span class="n">ones</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;array addition: &#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">+</span> <span class="n">ones</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;array multiplication: &#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">*</span> <span class="n">ones</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1D array:  [1 2 3]
+2D array:  [[1 2]
+ [3 4]]
+2D array:  [[1 1]
+ [1 1]]
+array addition:  [[2 3]
+ [4 5]]
+array multiplication:  [[1 2]
+ [3 4]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="PEP8">PEP8<a class="anchor-link" href="#PEP8">&#182;</a></h3><p>To make code more readable and have a clear format, there are several rules that are documented in the <strong>Python Enhancement Protocol (PEP8)</strong>. It is to etensive to discuss here, but please have a look at the document: <a href="https://www.python.org/dev/peps/pep-0008/">https://www.python.org/dev/peps/pep-0008/</a></p>
 <p>PEP8 code checking is build in in many integrated development environments (IDE) like Pycharm. Pycharm will highlight python code that is not PEP8.</p>
 <p>Code can also be checked on compliance to the PEP8 rules on our system using the <code>pylint3</code> commandline tool. When checking your code you invoke the pylint3 program and give it the name of your saved python script as argument: <code>pylint3 my_awesome_code.py</code>. Pylint3 will spit out warnings and errors on the different levels of PEP8. A final score is given that marks the quality of the code. If you change code and rerun pylint3 it will show if the code has improved or not.</p>
